@@ -18,12 +18,12 @@ if __name__ == "__main__":
     elif  operation == "multiply":
           return num1*num2  
     elif  operation == "divide":
-          if num2==0:
-             return("Zero can not be a dinomenator") 
+          return num1/num2
           else:
-             return num1/num2  
+               num2==0:
+             return("Zero can not be a dinomenator")   
 
-
+     
 
 
 
