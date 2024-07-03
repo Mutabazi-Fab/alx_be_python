@@ -20,7 +20,7 @@ if __name__ == "__main__":
     elif  operation == "divide":
           return num1/num2
           else:
-               num2==0:
+               num2\s==\s0:
              return("Zero can not be a dinomenator")   
 
      
