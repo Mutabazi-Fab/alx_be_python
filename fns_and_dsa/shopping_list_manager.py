@@ -29,21 +29,24 @@ def view_list(shopping_list):
         print("\nThe shopping list is currently empty.")
 
 def main():
-    shopping_list = []
+    shopping_list = []  # Implementation of an array shopping_list
     while True:
-        display_menu()
-        choice = input("Choose an option: ")
-        if choice == '1':
-            add_item(shopping_list)
-        elif choice == '2':
-            remove_item(shopping_list)
-        elif choice == '3':
-            view_list(shopping_list)
-        elif choice == '4':
-            print("Exiting the shopping list manager.")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+        display_menu()  # Calling display_menu function
+        try:
+            choice = int(input("Choose an option (1-4): "))  # Choice input as a number
+            if choice == 1:
+                add_item(shopping_list)
+            elif choice == 2:
+                remove_item(shopping_list)
+            elif choice == 3:
+                view_list(shopping_list)
+            elif choice == 4:
+                print("Exiting the shopping list manager.")
+                break
+            else:
+                print("Invalid choice. Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
 
 if __name__ == "__main__":
     main()
